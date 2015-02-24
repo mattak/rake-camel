@@ -20,7 +20,7 @@ Or install it yourself as:
 
 In your Rakefile.
 
-    require 'rake-camel'
+    require 'rake/camel'
     Rake::Camel.rule()
 
     task 'myGreatTask' do |t|

@@ -27,7 +27,7 @@ module Rake
 
       def rule()
         Rake::Task.create_rule('') do |t|
-          invoke(t.name, Rake.application.tasks.reject{ |t| t.kind_of?(Rake::FileTask) }.collect{ |x| x.to_s })
+          invoke(t.name, Rake.application.tasks.reject{ |t| t.kind_of?(Rake::FileTask) }.reject{ |t| t.name == 'default' }.collect{ |x| x.to_s })
         end
       end
     end
